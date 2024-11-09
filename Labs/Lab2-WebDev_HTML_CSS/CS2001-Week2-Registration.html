@@ -14,11 +14,18 @@
                        The css class of the menu is "navlist"
                        Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
             <ul class="navlist">
+                <li><a href="">Home</a></li>
+                <li><a href="">Register</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="">Help</a></li>
             </ul>
          </nav>
         <main>
             <!-- Check Week 2 Lecture to learn about HTML5 semantic elements-->
             <aside>
+                <input type="search" class="search" id="search" name="search" placeholder="Search"> <br>
+                <!-- Placeholder puts search within the input text form -->
+                
             </aside>
             <section>
                 <form class="center" novalidate>
@@ -33,13 +40,35 @@
                            and how to create a button that would react to a click Event
                         -->
                     <!-- Example given for user type checkboxes-->
+                     <label for="name">Name:</label> 
+                     <input class="textInput" type="text" id="name" name="name" required maxlength="50"><br><br>
                     
+                     <label for="email">Email:</label>
+                     <input class="textInput" type="text" id="email" name="email" ><br><br>
+
+                     <label for="pwd">Password:</label>
+                     <input class="textInput" type="password" id="pwd" name="pwd" required minlength="8"><br><br>
+
+                     <label for="reTypeP">Re-type Password:</label>
+                     <input class="textInput" type="password" id="reTypeP" name="reTypeP" required minlength="8"><br><br>
+
+
+                    <!-- Examples start here! -->
                     <input type="checkbox" id="buyer" name="buyer" value="buyer">
                     <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
                     <input type="checkbox" id="seller" name="seller" value="seller">
                     <label for="seller">I want to sell produce from my allotment.</label><br><br>
-
+                    <!-- Example ends here and I add checkbox with mandatory/required check for form submission 
+                     and value is sent to server if tos=tos -->
+                    
+                    <input type="checkbox" id="tos" name="tos" value="tos" required >
+                    <label for="tos">I agree to the <a href="">Terms of Use</a> and <a href="">Privacy Policy</a>.</label>
                     <br><br>
+
+                    
+                    <input type="button" id="button" value="Register" onclick="submitForm()">
+                    <label for="button"><a href="">Learn more</a></label>
+                   
                 </form>
                 <div class="center" id="hiddenSection">
                     <p id="hiddenParagraph"></p>
